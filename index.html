@@ -5,8 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
+<!-- writing hello world! using js only -->
+<!-- <body>
+    <div id="root">In beta</div>
+    <script>
+        //createElement = uses element name which you want to create.
+       const heading =  document.createElement('h1');//(it created element)
+       heading.innerHTML = 'Hello world from script.';//(by using innerHTML we have assigned value to it)
+       const root = document.getElementById('root');//(by getElementById we get the id on which above thing should be put)
+       root.appendChild(heading);//(by appendChild we have append the above element to the id-root)
+    </script>
+</body> -->
+
+<!-- writing hello world! using React -->
+<!-- <body>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <div id="startingDiv"></div>
+    <script>
+        const heading = React.createElement('h1',{},'Hello world using React.');//here we are creating the element and giving its value
+        const root = ReactDOM.createRoot(document.getElementById('startingDiv'));//createRoot helps you inject react at a particular place(for an example here we are injecting react at id=startingDiv)
+        root.render(heading);//this will render react at root and it will show heading element.
+    </script>
+</body> -->
+
+<!-- showing multiple elements in a div(so say showing multiple child in a container) using React -->
+<!-- <body>
+    <div id="root">Not rendered</div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+        const heading1 = React.createElement('h1',{id:'title1'},'Showing heading 1');//child 1
+        const heading2 = React.createElement('h2',{id:'title2'},'Showing heading 2');//child 2
+        //child 1 and child 2 will be wrapped inside the container
+        const container = React.createElement('div',{id:'containerBodyThatHasBothHeading1AndHeading2'},[heading1,heading2]);
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(container);
+    </script>
+</body> -->
+
+<!-- spliting the application into different file -->
 <body>
-    
+    <div id="root">Not rendered</div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="App.js"></script>
 </body>
 </html>
